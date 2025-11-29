@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creativity media generator | Video</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="../js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="app">
+    <aside id="main-header" class="sidebar"></aside>
+  <main class="main">
+    <header class="hero">
+      <div class="hero-image">
+        <img
+          src="../public/images/video-recording.png"
+          alt="Hero image"
+        />
+      </div>
+    </header>
+
+    <section class="welcome">
+      <h1>Create video using your images</h1>
+    </section>
+
+    <section class="video-section">
+      <div class="video-panels">
+        <div class="video-panel">
+<h3>Upload image to make a video</h3>
+  <label class="file-label">
+    <span>Choose input file</span>
+    <input type="file" id="videoInputFile" accept="video/*" hidden />
+  </label>
+
+  <button class="primary-btn" type="button">Generate video</button>
+</div>
+
+<div class="video-panel">
+  <h3>Output for video</h3>
+  <div class="video-actions">
+    <button class="primary-btn" type="button">Preview</button>
+    <button class="primary-btn" type="button">Download</button>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+      <footer class="footer" id="main-footer">
+    </footer>
+</div>
+  </body>
+</html>
