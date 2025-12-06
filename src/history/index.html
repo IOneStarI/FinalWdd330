@@ -6,16 +6,35 @@
     <title>Creativity media generator | History</title>
     <link rel="stylesheet" href="/css/style.css" />
     <script src="../js/main.js" type="module"></script>
+    <script type="module" src="../js/history.mjs"></script>
   </head>
 
   <body>
     <div class="app">
     <aside id="main-header" class="sidebar"></aside>
   <main class="main">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
     <h1>History</h1>
-  </main>
-      <footer class="footer" id="main-footer">
-    </footer>
+    <button id="clear-history" class="secondary-btn" style="background: #ff4444; color: white;">Clear All</button>
+  </div>
+  
+  <div class="table-container">
+    <table id="history-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Preview</th>
+          <th>Size</th>
+          <th>Format</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
 </div>
+<footer class="footer" id="main-footer"></footer>
   </body>
 </html>

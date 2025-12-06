@@ -6,62 +6,107 @@
     <title>Creativity media generator | Image</title>
     <link rel="stylesheet" href="/css/style.css" />
     <script src="../js/main.js" type="module"></script>
+    <script src="https://js.puter.com/v2/"></script>
+    <script type="module" src="../js/placeHolderGenerator.mjs"></script>
   </head>
 
   <body>
     <div class="app">
     <aside id="main-header" class="sidebar"></aside>
-  <main class="main">
-    <header class="hero">
-      <div class="hero-image">
-        <img
+    <main class="main">
+      <header class="hero">
+        <div class="hero-image">
+          <img
           src="../public/images/image-take.png"
           alt="Hero image"
-        />
-      </div>
-    </header>
+          />
+        </div>
+      </header>
 
     <section class="welcome">
       <h1>Create image using ai or jus symply get an placeholder</h1>
     </section>
-
     <section class="image-section">
-      <div class="image-panels">
+  <h2 class="image-section-title">Placeholder & AI image generator</h2>
+
+  <div class="image-panels">
+    <div class="image-panel">
+      <h3>Settings</h3>
+
+      <input
+        id="width"
+        type="number"
+        placeholder="Width (px)"
+        min="1"
+        class="prompt-input"
+      />
+
+      <input
+        id="height"
+        type="number"
+        placeholder="Height (px)"
+        min="1"
+        class="prompt-input"
+      />
+
+      <select id="format" class="prompt-input">
+        <option value="jpg">JPEG</option>
+        <option value="webp">WEBP</option>
+      </select>
+
+      <button class="primary-btn" type="button" id="generate-btn">
+        Generate placeholder image
+      </button>
+    </div>
+
+    <div class="image-panel">
+      <h3>Preview</h3>
+
+      <div class="card-preview" id="sharedPreview" style="display: none;">
+        <img
+          id="sharedImg"
+          alt="Generated image"
+          style="max-width: 100%; max-height: 100%;"
+        />
       </div>
-      <div class="image-panel">
-        <h3>Input for parameters</h3>
 
-  <button class="primary-btn" type="button">
-    Generate placeholder image
-  </button>
+      <div class="image-actions" id="sharedActions" style="display: none;">
+        <button class="primary-btn" type="button" id="preview-btn">Preview</button>
+        <button class="primary-btn" type="button" id="download-btn">Download</button>
+      </div>
+    </div>
 
-  <div class="image-actions">
-    <button class="primary-btn" type="button">Preview</button>
-    <button class="primary-btn" type="button">Download</button>
+    <div class="image-panel">
+      <h3>AI Image Generator</h3>
+
+      <textarea
+        class="prompt-input"
+        id="imagePrompt"
+        rows="4"
+        placeholder="Describe the image you want to generate... (e.g. 'A futuristic city at sunset')"
+      ></textarea>
+
+      <div class="ai-model-selector">
+        <select id="aiModel" class="prompt-input">
+          <option value="gpt-image-1-mini">GPT Image Mini (Free)</option>
+          <option value="gpt-image-1">GPT Image (Free)</option>
+          <option value="black-forest-labs/FLUX.1-schnell-Free">Flux.1 Schnell Free</option>
+        </select>
+
+        <select id="aiQuality" class="prompt-input ai-quality-select">
+          <option value="low">Low (Fastest)</option>
+          <option value="medium">Medium</option>
+        </select>
+      </div>
+
+      <button class="primary-btn" type="button" id="aiGenerateBtn">
+        Generate AI image
+      </button>
+    </div>
   </div>
-</div>
-<div class="image-panel">
-  <h3>Input for AI generated image</h3>
- <textarea
-    class="prompt-input"
-    id="imagePrompt"
-    rows="4"
-    placeholder="Describe the image you want to generate..."
-  ></textarea>
-
-  <button class="primary-btn" type="button">
-    Generate AI image
-  </button>
-
-  <div class="image-actions">
-    <button class="primary-btn" type="button">Preview</button>
-    <button class="primary-btn" type="button">Download</button>
-  </div>
-</div>
-    </section>
-  </main>
-      <footer class="footer" id="main-footer">
-    </footer>
-</div>
+</section>
+    </div>
+    </main>
+<footer class="footer" id="main-footer"></footer>
   </body>
 </html>
